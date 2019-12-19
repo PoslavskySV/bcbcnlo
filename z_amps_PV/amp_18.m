@@ -1,0 +1,1 @@
+(16/3)*Pi^(-4)*(2*qpBcMinus-qq-s+2*qpBcPlus+MT^2)^(-1)*MC^(-2)*e*MB^(-2)*(4*MC^2+4*MB^2-s+8*MB*MC)^(-1)*(-qq+MT^2)^(-1)*scalar3*(MB*qpBcPlus+MC*qpBcMinus-MC*s+MC*qpBcPlus+MB*qpBcMinus)*s^(-2)*(MB^2*MT^2+2*MC^2*qpBcMinus-MC^2*qq-MC^2*s+2*MB*MC*qpBcMinus-2*MB*MC*qq+2*MC^2*qpBcPlus+MC^2*MT^2+2*MB*MC*qpBcPlus+2*MB*MC*MT^2-MB^2*qq)^(-1)*(MB+MC)^6*gStrong^4*(qpBcMinus-qpBcPlus)

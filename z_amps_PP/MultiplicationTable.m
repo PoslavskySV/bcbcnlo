@@ -1,0 +1,6 @@
+$MultiplicationTable = {
+    scalar0*Conjugate[scalar0] -> (1/4)*CW^(-2)*((I)*MZ^2+(-I)*s+MZ*GammaZ)^(-1)*e^2*(-I+(2+I*2)*SW^2)*(-MZ^2+s+(-I)*MZ*GammaZ)^(-1)*(-1+(2+I*2)*SW^2)*SW^(-2)*(-t*MB^2+3*MC^4-MC^2*s-2*MB*MC*s+12*MB*MC^3-2*MB*t*MC+u^2+3*MB^4-3*u*MB^2-3*MC^2*u-MC^2*t-6*MB*u*MC+18*MC^2*MB^2+12*MB^3*MC+u*s-MB^2*s),
+    scalar0*Conjugate[scalar1] -> -(1/2)*(2*SW-1)*CW^(-1)*(-MZ^2+s+(I)*MZ*GammaZ)^(-1)*e^2*s^(-1)*(2*SW+1)*SW^(-1)*(-t*MB^2+3*MC^4-MC^2*s-2*MB*MC*s+12*MB*MC^3-2*MB*t*MC+u^2+3*MB^4-3*u*MB^2-3*MC^2*u-MC^2*t-6*MB*u*MC+18*MC^2*MB^2+12*MB^3*MC+u*s-MB^2*s),
+    Conjugate[scalar0]*scalar1 -> -(1/2)*(2*SW-1)*CW^(-1)*e^2*s^(-1)*(2*SW+1)*(-MZ^2+s+(-I)*MZ*GammaZ)^(-1)*SW^(-1)*(-t*MB^2+3*MC^4-MC^2*s-2*MB*MC*s+12*MB*MC^3-2*MB*t*MC+u^2+3*MB^4-3*u*MB^2-3*MC^2*u-MC^2*t-6*MB*u*MC+18*MC^2*MB^2+12*MB^3*MC+u*s-MB^2*s),
+    Conjugate[scalar1]*scalar1 -> -2*e^2*s^(-2)*(-t*MB^2+3*MC^4-MC^2*s-2*MB*MC*s+12*MB*MC^3-2*MB*t*MC+u^2+3*MB^4-3*u*MB^2-3*MC^2*u-MC^2*t-6*MB*u*MC+18*MC^2*MB^2+12*MB^3*MC+u*s-MB^2*s)
+}

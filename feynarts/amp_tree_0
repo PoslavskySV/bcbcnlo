@@ -1,0 +1,1 @@
+ubar[pBottom_a] * (-I) * gStrong * G_{c} * T_{F} * v[paBottom_a] * ubar[pCharm_a] * ((-2*I)/3) * e * G_{a} * (MC-DiracSlash[paBottom_{a}]-DiracSlash[paCharm_{a}]-DiracSlash[pBottom_{a}]) * (-I) * gStrong * G_{b} * T_{F} * v[paCharm_a] * (-I) * g_{bc} * eps_a * PropagatorDenominator[paBottom_{a}+pBottom_{a},0] * PropagatorDenominator[paBottom_{a}+paCharm_{a}+pBottom_{a},MC]

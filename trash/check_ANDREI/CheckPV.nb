@@ -1,0 +1,240 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8711,        230]
+NotebookOptionsPosition[      8090,        203]
+NotebookOutlinePosition[      8443,        219]
+CellTagsIndexPosition[      8400,        216]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$PrePrint", "=", "StandardForm"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.67301893066503*^9, 3.673018954876951*^9}, {
+  3.673714043610392*^9, 3.673714049627367*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"NotebookDirectory", "::", "nosv"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"The notebook \
+\[NoBreak]\\!\\(TraditionalForm\\`\\*TemplateBox[List[FrontEndObject[\
+LinkObject[\\\"mwz9k_shm\\\", 3, 1]], 25, \
+\\\"FrontEndObject[LinkObject[\\\\\\\"mwz9k_shm\\\\\\\", 3, 1]]\\\", \\\"25\\\
+\", FormBox[\\\"\\\\\\\"Untitled-2\\\\\\\"\\\", TraditionalForm]], \
+\\\"NotebookObjectUnsaved\\\"]\\)\[NoBreak] is not saved. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/NotebookDirectory\\\", ButtonNote -> \
+\\\"NotebookDirectory::nosv\\\"]\\)\"\>"}], TraditionalForm]], "Message", \
+"MSG",
+ CellChangeTimes->{3.679392775782621*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{"SetDirectory", "::", "fstr"}], "MessageName"], 
+   RowBox[{
+   ":", " "}], "\<\"File specification \
+\[NoBreak]\\!\\(TraditionalForm\\`$Failed\\)\[NoBreak] is not a string of one \
+or more characters. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/fstr\\\", ButtonNote -> \
+\\\"SetDirectory::fstr\\\"]\\)\"\>"}], TraditionalForm]], "Message", "MSG",
+ CellChangeTimes->{3.6793927758112926`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Load", " ", "helper", " ", "functions"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"<<", "CrossSection`"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Load", " ", 
+     RowBox[{"Kiselev", "'"}], "s", " ", "cross", " ", "sections", " ", 
+     RowBox[{"(", 
+      RowBox[{"corrected", " ", "for", " ", "PV", " ", "state"}], ")"}]}], 
+    " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"<<", "TreeLevelKnownCrossSections`"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"nb", " ", "=", " ", 
+     RowBox[{"0.3894", " ", 
+      SuperscriptBox["10", "6"]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"pb", " ", "=", 
+     RowBox[{
+      SuperscriptBox["10", "3"], "nb"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"fb", " ", "=", 
+     RowBox[{
+      SuperscriptBox["10", "6"], "nb"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Mu]b", " ", "=", 
+     RowBox[{
+      SuperscriptBox["10", 
+       RowBox[{"-", "3"}]], "nb"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"mb", " ", "=", 
+     RowBox[{
+      SuperscriptBox["10", 
+       RowBox[{"-", "6"}]], "nb"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"AllStates", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{"\"\<PP\>\"", ",", "\"\<PV\>\"", ",", " ", "\"\<VV\>\""}], 
+      "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"zAllStates", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{"\"\<zPP\>\"", ",", "\"\<zPV\>\"", ",", " ", "\"\<zVV\>\""}], 
+      "}"}]}], ";"}], "\[IndentingNewLine]", " ", 
+   RowBox[{"(*", 
+    RowBox[{"Load", " ", "data"}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"ReadData", "[", 
+       RowBox[{
+        RowBox[{"\"\<amps_\>\"", "<>", "#"}], ",", "#"}], "]"}], "&"}], "/@", 
+     "AllStates"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"ReadData", "[", 
+       RowBox[{
+        RowBox[{"\"\<z_amps_\>\"", "<>", "#"}], ",", 
+        RowBox[{"\"\<z\>\"", "<>", "#"}]}], "]"}], "&"}], "/@", "AllStates"}],
+     ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.673108024656691*^9, 3.6731080552328587`*^9}, {
+   3.673108269822706*^9, 3.673108273255234*^9}, 3.67310915031843*^9, {
+   3.673112964161435*^9, 3.6731129807115507`*^9}, 3.673113046785911*^9, {
+   3.673113101617074*^9, 3.673113110306007*^9}, 3.673113141042931*^9, {
+   3.673116799435274*^9, 3.673116808530895*^9}, {3.673117431188551*^9, 
+   3.673117450081725*^9}, 3.673117503195863*^9, {3.673259123532465*^9, 
+   3.6732591292967033`*^9}, {3.67325999571382*^9, 3.673260003952952*^9}, {
+   3.673277848460094*^9, 3.6732778499913807`*^9}, {3.6733328797940187`*^9, 
+   3.673332887819911*^9}, {3.673336719759083*^9, 3.673336752505528*^9}, {
+   3.673336828182982*^9, 3.673336929786467*^9}, {3.673346399242428*^9, 
+   3.673346408062142*^9}, {3.673346457855826*^9, 3.6733464790630417`*^9}, {
+   3.6733497881514053`*^9, 3.673349791575789*^9}, {3.6733499324356422`*^9, 
+   3.6733499386468773`*^9}, {3.6733499917088842`*^9, 3.673350034275478*^9}, {
+   3.6736257085510807`*^9, 3.673625710597124*^9}, 3.6737134511869802`*^9, {
+   3.673713578517619*^9, 3.673713612881133*^9}, 3.677237188790174*^9, 
+   3.677237971599123*^9, {3.677336591708045*^9, 3.677336593568946*^9}, {
+   3.6773367880749073`*^9, 3.677336805585332*^9}, 3.6784480310546494`*^9, {
+   3.678459994956195*^9, 3.67846000197412*^9}, {3.678460089203826*^9, 
+   3.6784600954716682`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox["\<\"Package-X v1.0.4, by Hiren H. Patel\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{
+  3.678460002688037*^9, {3.678460095831319*^9, 3.678460104318884*^9}, 
+   3.678519019255005*^9, 3.678598368504512*^9, 3.6786871112885303`*^9, 
+   3.678692848076877*^9, {3.678711028311756*^9, 3.678711036118115*^9}, 
+   3.678723706318198*^9, 3.678723738101132*^9, 3.679334382306798*^9, 
+   3.6793912361415586`*^9, 3.6793922571852818`*^9, 3.679392700728673*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"\\!\\(\\*TemplateBox[List[\\\"\\\\\\\"For more information, see \
+the \\\\\\\"\\\", TagBox[ButtonBox[PaneSelectorBox[List[Rule[False, \
+\\\"\\\\\\\"guide\\\\\\\"\\\"], Rule[True, StyleBox[\\\"\\\\\\\"guide\\\\\\\"\
+\\\", List[\\\"HyperlinkActive\\\"]]]], \
+Dynamic[CurrentValue[\\\"MouseOver\\\"]], Rule[BaseStyle, \
+List[\\\"Hyperlink\\\"]], Rule[FrameMargins, 0], Rule[ImageSize, Automatic]], \
+Rule[BaseStyle, \\\"Link\\\"], Rule[ButtonData, \\\"paclet:X/guide/PackageX\\\
+\"], Rule[ButtonNote, \\\"paclet:X/guide/PackageX\\\"]], \
+Function[Annotation[Slot[1], \\\"paclet:X/guide/PackageX\\\", \\\"Hyperlink\\\
+\"]]]], \\\"RowDefault\\\"]\\)\"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{
+  3.678460002688037*^9, {3.678460095831319*^9, 3.678460104318884*^9}, 
+   3.678519019255005*^9, 3.678598368504512*^9, 3.6786871112885303`*^9, 
+   3.678692848076877*^9, {3.678711028311756*^9, 3.678711036118115*^9}, 
+   3.678723706318198*^9, 3.678723738101132*^9, 3.679334382306798*^9, 
+   3.6793912361415586`*^9, 3.6793922571852818`*^9, 3.679392701486013*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ReadData", "[", 
+   RowBox[{"\"\<amps_PV_no_top\>\"", ",", "\"\<tPV\>\""}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.678723713950245*^9, 3.678723745783145*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Mu]Scale", "=", 
+   RowBox[{"2", 
+    RowBox[{"(", 
+     RowBox[{"$MC", "+", "$MB"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Evaluate", "[", " ", 
+  RowBox[{"DsDCosTheta", "[", 
+   RowBox[{"state", ",", 
+    RowBox[{"ecm", "^", "2"}], ",", "cos", ",", " ", "\[Mu]Scale"}], "]"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.679392768357538*^9, 3.6793927736547747`*^9}}]
+},
+WindowSize->{808, 751},
+WindowMargins->{{Automatic, 170}, {5, Automatic}},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 6, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 329, 8, 46, "Input"],
+Cell[912, 32, 767, 16, 34, "Message"],
+Cell[1682, 50, 545, 12, 24, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2264, 67, 3578, 82, 277, "Input"],
+Cell[CellGroupData[{
+Cell[5867, 153, 479, 8, 20, "Print"],
+Cell[6349, 163, 1085, 16, 20, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[7461, 183, 203, 5, 28, "Input"],
+Cell[7667, 190, 419, 11, 46, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

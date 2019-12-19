@@ -1,0 +1,205 @@
+(* Created with the Wolfram Language : www.wolfram.com *)
+-(alphaS^2*e^4*fBc^4*(MB + MC)^4*Pi*(2*MB + 2*MC - Sqrt[s])*
+   (2*MB + 2*MC + Sqrt[s])*Sqrt[-4*MB^2 - 8*MB*MC - 4*MC^2 + s]*
+   (-36*MB^12*s^2 - 144*MB^11*MC*s^2 - 216*MB^10*MC^2*s^2 - 
+    144*MB^9*MC^3*s^2 + 468*MB^8*MC^4*s^2 + 2016*MB^7*MC^5*s^2 + 
+    3024*MB^6*MC^6*s^2 + 2016*MB^5*MC^7*s^2 + 468*MB^4*MC^8*s^2 - 
+    144*MB^3*MC^9*s^2 - 216*MB^2*MC^10*s^2 - 144*MB*MC^11*s^2 - 
+    36*MC^12*s^2 + 72*MB^10*s^3 + 252*MB^9*MC*s^3 + 324*MB^8*MC^2*s^3 + 
+    288*MB^7*MC^3*s^3 + 324*MB^6*MC^4*s^3 + 360*MB^5*MC^5*s^3 + 
+    324*MB^4*MC^6*s^3 + 288*MB^3*MC^7*s^3 + 324*MB^2*MC^8*s^3 + 
+    252*MB*MC^9*s^3 + 72*MC^10*s^3 + 9*MB^6*MC^2*s^4 + 18*MB^4*MC^4*s^4 + 
+    9*MB^2*MC^6*s^4 - 576*CW^2*MB^12*MZ^2*s*SW^2 - 
+    2304*CW^2*MB^11*MC*MZ^2*s*SW^2 - 3456*CW^2*MB^10*MC^2*MZ^2*s*SW^2 - 
+    2304*CW^2*MB^9*MC^3*MZ^2*s*SW^2 - 2304*CW^2*MB^8*MC^4*MZ^2*s*SW^2 - 
+    6912*CW^2*MB^7*MC^5*MZ^2*s*SW^2 - 10368*CW^2*MB^6*MC^6*MZ^2*s*SW^2 - 
+    6912*CW^2*MB^5*MC^7*MZ^2*s*SW^2 - 2880*CW^2*MB^4*MC^8*MZ^2*s*SW^2 - 
+    4608*CW^2*MB^3*MC^9*MZ^2*s*SW^2 - 6912*CW^2*MB^2*MC^10*MZ^2*s*SW^2 - 
+    4608*CW^2*MB*MC^11*MZ^2*s*SW^2 - 1152*CW^2*MC^12*MZ^2*s*SW^2 - 
+    144*MB^12*s^2*SW^2 + 576*CW^2*MB^12*s^2*SW^2 - 576*MB^11*MC*s^2*SW^2 + 
+    2304*CW^2*MB^11*MC*s^2*SW^2 - 864*MB^10*MC^2*s^2*SW^2 + 
+    3456*CW^2*MB^10*MC^2*s^2*SW^2 - 576*MB^9*MC^3*s^2*SW^2 + 
+    2304*CW^2*MB^9*MC^3*s^2*SW^2 - 3024*MB^8*MC^4*s^2*SW^2 + 
+    2304*CW^2*MB^8*MC^4*s^2*SW^2 - 11520*MB^7*MC^5*s^2*SW^2 + 
+    6912*CW^2*MB^7*MC^5*s^2*SW^2 - 17280*MB^6*MC^6*s^2*SW^2 + 
+    10368*CW^2*MB^6*MC^6*s^2*SW^2 - 11520*MB^5*MC^7*s^2*SW^2 + 
+    6912*CW^2*MB^5*MC^7*s^2*SW^2 - 3312*MB^4*MC^8*s^2*SW^2 + 
+    2880*CW^2*MB^4*MC^8*s^2*SW^2 - 1728*MB^3*MC^9*s^2*SW^2 + 
+    4608*CW^2*MB^3*MC^9*s^2*SW^2 - 2592*MB^2*MC^10*s^2*SW^2 + 
+    6912*CW^2*MB^2*MC^10*s^2*SW^2 - 1728*MB*MC^11*s^2*SW^2 + 
+    4608*CW^2*MB*MC^11*s^2*SW^2 - 432*MC^12*s^2*SW^2 + 
+    1152*CW^2*MC^12*s^2*SW^2 - 192*CW^2*MB^10*MZ^2*s^2*SW^2 - 
+    960*CW^2*MB^9*MC*MZ^2*s^2*SW^2 - 1536*CW^2*MB^8*MC^2*MZ^2*s^2*SW^2 - 
+    1824*CW^2*MB^7*MC^3*MZ^2*s^2*SW^2 - 3072*CW^2*MB^6*MC^4*MZ^2*s^2*SW^2 - 
+    4032*CW^2*MB^5*MC^5*MZ^2*s^2*SW^2 - 3264*CW^2*MB^4*MC^6*MZ^2*s^2*SW^2 - 
+    2784*CW^2*MB^3*MC^7*MZ^2*s^2*SW^2 - 3072*CW^2*MB^2*MC^8*MZ^2*s^2*SW^2 - 
+    1920*CW^2*MB*MC^9*MZ^2*s^2*SW^2 - 384*CW^2*MC^10*MZ^2*s^2*SW^2 - 
+    384*MB^10*s^3*SW^2 + 192*CW^2*MB^10*s^3*SW^2 - 1488*MB^9*MC*s^3*SW^2 + 
+    960*CW^2*MB^9*MC*s^3*SW^2 - 2064*MB^8*MC^2*s^3*SW^2 + 
+    1536*CW^2*MB^8*MC^2*s^3*SW^2 - 2064*MB^7*MC^3*s^3*SW^2 + 
+    1824*CW^2*MB^7*MC^3*s^3*SW^2 - 2832*MB^6*MC^4*s^3*SW^2 + 
+    3072*CW^2*MB^6*MC^4*s^3*SW^2 - 3456*MB^5*MC^5*s^3*SW^2 + 
+    4032*CW^2*MB^5*MC^5*s^3*SW^2 - 2928*MB^4*MC^6*s^3*SW^2 + 
+    3264*CW^2*MB^4*MC^6*s^3*SW^2 - 2544*MB^3*MC^7*s^3*SW^2 + 
+    2784*CW^2*MB^3*MC^7*s^3*SW^2 - 2832*MB^2*MC^8*s^3*SW^2 + 
+    3072*CW^2*MB^2*MC^8*s^3*SW^2 - 1968*MB*MC^9*s^3*SW^2 + 
+    1920*CW^2*MB*MC^9*s^3*SW^2 - 480*MC^10*s^3*SW^2 + 
+    384*CW^2*MC^10*s^3*SW^2 - 48*CW^2*MB^6*MC^2*MZ^2*s^3*SW^2 - 
+    144*CW^2*MB^4*MC^4*MZ^2*s^3*SW^2 - 96*CW^2*MB^2*MC^6*MZ^2*s^3*SW^2 - 
+    60*MB^6*MC^2*s^4*SW^2 + 48*CW^2*MB^6*MC^2*s^4*SW^2 - 
+    144*MB^4*MC^4*s^4*SW^2 + 144*CW^2*MB^4*MC^4*s^4*SW^2 - 
+    84*MB^2*MC^6*s^4*SW^2 + 96*CW^2*MB^2*MC^6*s^4*SW^2 + 
+    1536*CW^4*GammaZ^2*MB^12*MZ^2*SW^4 + 6144*CW^4*GammaZ^2*MB^11*MC*MZ^2*
+     SW^4 + 9216*CW^4*GammaZ^2*MB^10*MC^2*MZ^2*SW^4 + 
+    6144*CW^4*GammaZ^2*MB^9*MC^3*MZ^2*SW^4 + 7680*CW^4*GammaZ^2*MB^8*MC^4*
+     MZ^2*SW^4 + 24576*CW^4*GammaZ^2*MB^7*MC^5*MZ^2*SW^4 + 
+    36864*CW^4*GammaZ^2*MB^6*MC^6*MZ^2*SW^4 + 24576*CW^4*GammaZ^2*MB^5*MC^7*
+     MZ^2*SW^4 + 12288*CW^4*GammaZ^2*MB^4*MC^8*MZ^2*SW^4 + 
+    24576*CW^4*GammaZ^2*MB^3*MC^9*MZ^2*SW^4 + 36864*CW^4*GammaZ^2*MB^2*MC^10*
+     MZ^2*SW^4 + 24576*CW^4*GammaZ^2*MB*MC^11*MZ^2*SW^4 + 
+    6144*CW^4*GammaZ^2*MC^12*MZ^2*SW^4 + 1536*CW^4*MB^12*MZ^4*SW^4 + 
+    6144*CW^4*MB^11*MC*MZ^4*SW^4 + 9216*CW^4*MB^10*MC^2*MZ^4*SW^4 + 
+    6144*CW^4*MB^9*MC^3*MZ^4*SW^4 + 7680*CW^4*MB^8*MC^4*MZ^4*SW^4 + 
+    24576*CW^4*MB^7*MC^5*MZ^4*SW^4 + 36864*CW^4*MB^6*MC^6*MZ^4*SW^4 + 
+    24576*CW^4*MB^5*MC^7*MZ^4*SW^4 + 12288*CW^4*MB^4*MC^8*MZ^4*SW^4 + 
+    24576*CW^4*MB^3*MC^9*MZ^4*SW^4 + 36864*CW^4*MB^2*MC^10*MZ^4*SW^4 + 
+    24576*CW^4*MB*MC^11*MZ^4*SW^4 + 6144*CW^4*MC^12*MZ^4*SW^4 + 
+    512*CW^4*GammaZ^2*MB^10*MZ^2*s*SW^4 + 3072*CW^2*MB^12*MZ^2*s*SW^4 - 
+    3072*CW^4*MB^12*MZ^2*s*SW^4 + 2560*CW^4*GammaZ^2*MB^9*MC*MZ^2*s*SW^4 + 
+    12288*CW^2*MB^11*MC*MZ^2*s*SW^4 - 12288*CW^4*MB^11*MC*MZ^2*s*SW^4 + 
+    4096*CW^4*GammaZ^2*MB^8*MC^2*MZ^2*s*SW^4 + 18432*CW^2*MB^10*MC^2*MZ^2*s*
+     SW^4 - 18432*CW^4*MB^10*MC^2*MZ^2*s*SW^4 + 5632*CW^4*GammaZ^2*MB^7*MC^3*
+     MZ^2*s*SW^4 + 12288*CW^2*MB^9*MC^3*MZ^2*s*SW^4 - 
+    12288*CW^4*MB^9*MC^3*MZ^2*s*SW^4 + 10752*CW^4*GammaZ^2*MB^6*MC^4*MZ^2*s*
+     SW^4 + 13056*CW^2*MB^8*MC^4*MZ^2*s*SW^4 - 15360*CW^4*MB^8*MC^4*MZ^2*s*
+     SW^4 + 14336*CW^4*GammaZ^2*MB^5*MC^5*MZ^2*s*SW^4 + 
+    39936*CW^2*MB^7*MC^5*MZ^2*s*SW^4 - 49152*CW^4*MB^7*MC^5*MZ^2*s*SW^4 + 
+    12288*CW^4*GammaZ^2*MB^4*MC^6*MZ^2*s*SW^4 + 59904*CW^2*MB^6*MC^6*MZ^2*s*
+     SW^4 - 73728*CW^4*MB^6*MC^6*MZ^2*s*SW^4 + 13312*CW^4*GammaZ^2*MB^3*MC^7*
+     MZ^2*s*SW^4 + 39936*CW^2*MB^5*MC^7*MZ^2*s*SW^4 - 
+    49152*CW^4*MB^5*MC^7*MZ^2*s*SW^4 + 16384*CW^4*GammaZ^2*MB^2*MC^8*MZ^2*s*
+     SW^4 + 17664*CW^2*MB^4*MC^8*MZ^2*s*SW^4 - 24576*CW^4*MB^4*MC^8*MZ^2*s*
+     SW^4 + 10240*CW^4*GammaZ^2*MB*MC^9*MZ^2*s*SW^4 + 
+    30720*CW^2*MB^3*MC^9*MZ^2*s*SW^4 - 49152*CW^4*MB^3*MC^9*MZ^2*s*SW^4 + 
+    2048*CW^4*GammaZ^2*MC^10*MZ^2*s*SW^4 + 46080*CW^2*MB^2*MC^10*MZ^2*s*
+     SW^4 - 73728*CW^4*MB^2*MC^10*MZ^2*s*SW^4 + 30720*CW^2*MB*MC^11*MZ^2*s*
+     SW^4 - 49152*CW^4*MB*MC^11*MZ^2*s*SW^4 + 7680*CW^2*MC^12*MZ^2*s*SW^4 - 
+    12288*CW^4*MC^12*MZ^2*s*SW^4 + 512*CW^4*MB^10*MZ^4*s*SW^4 + 
+    2560*CW^4*MB^9*MC*MZ^4*s*SW^4 + 4096*CW^4*MB^8*MC^2*MZ^4*s*SW^4 + 
+    5632*CW^4*MB^7*MC^3*MZ^4*s*SW^4 + 10752*CW^4*MB^6*MC^4*MZ^4*s*SW^4 + 
+    14336*CW^4*MB^5*MC^5*MZ^4*s*SW^4 + 12288*CW^4*MB^4*MC^6*MZ^4*s*SW^4 + 
+    13312*CW^4*MB^3*MC^7*MZ^4*s*SW^4 + 16384*CW^4*MB^2*MC^8*MZ^4*s*SW^4 + 
+    10240*CW^4*MB*MC^9*MZ^4*s*SW^4 + 2048*CW^4*MC^10*MZ^4*s*SW^4 + 
+    1056*MB^12*s^2*SW^4 - 3072*CW^2*MB^12*s^2*SW^4 + 
+    1536*CW^4*MB^12*s^2*SW^4 + 4224*MB^11*MC*s^2*SW^4 - 
+    12288*CW^2*MB^11*MC*s^2*SW^4 + 6144*CW^4*MB^11*MC*s^2*SW^4 + 
+    6336*MB^10*MC^2*s^2*SW^4 - 18432*CW^2*MB^10*MC^2*s^2*SW^4 + 
+    9216*CW^4*MB^10*MC^2*s^2*SW^4 + 4224*MB^9*MC^3*s^2*SW^4 - 
+    12288*CW^2*MB^9*MC^3*s^2*SW^4 + 6144*CW^4*MB^9*MC^3*s^2*SW^4 + 
+    9312*MB^8*MC^4*s^2*SW^4 - 13056*CW^2*MB^8*MC^4*s^2*SW^4 + 
+    7680*CW^4*MB^8*MC^4*s^2*SW^4 + 33024*MB^7*MC^5*s^2*SW^4 - 
+    39936*CW^2*MB^7*MC^5*s^2*SW^4 + 24576*CW^4*MB^7*MC^5*s^2*SW^4 + 
+    49536*MB^6*MC^6*s^2*SW^4 - 59904*CW^2*MB^6*MC^6*s^2*SW^4 + 
+    36864*CW^4*MB^6*MC^6*s^2*SW^4 + 33024*MB^5*MC^7*s^2*SW^4 - 
+    39936*CW^2*MB^5*MC^7*s^2*SW^4 + 24576*CW^4*MB^5*MC^7*s^2*SW^4 + 
+    11040*MB^4*MC^8*s^2*SW^4 - 17664*CW^2*MB^4*MC^8*s^2*SW^4 + 
+    12288*CW^4*MB^4*MC^8*s^2*SW^4 + 11136*MB^3*MC^9*s^2*SW^4 - 
+    30720*CW^2*MB^3*MC^9*s^2*SW^4 + 24576*CW^4*MB^3*MC^9*s^2*SW^4 + 
+    16704*MB^2*MC^10*s^2*SW^4 - 46080*CW^2*MB^2*MC^10*s^2*SW^4 + 
+    36864*CW^4*MB^2*MC^10*s^2*SW^4 + 11136*MB*MC^11*s^2*SW^4 - 
+    30720*CW^2*MB*MC^11*s^2*SW^4 + 24576*CW^4*MB*MC^11*s^2*SW^4 + 
+    2784*MC^12*s^2*SW^4 - 7680*CW^2*MC^12*s^2*SW^4 + 
+    6144*CW^4*MC^12*s^2*SW^4 + 1024*CW^2*MB^10*MZ^2*s^2*SW^4 - 
+    1024*CW^4*MB^10*MZ^2*s^2*SW^4 + 5120*CW^2*MB^9*MC*MZ^2*s^2*SW^4 - 
+    5120*CW^4*MB^9*MC*MZ^2*s^2*SW^4 + 128*CW^4*GammaZ^2*MB^6*MC^2*MZ^2*s^2*
+     SW^4 + 8192*CW^2*MB^8*MC^2*MZ^2*s^2*SW^4 - 8192*CW^4*MB^8*MC^2*MZ^2*s^2*
+     SW^4 + 10112*CW^2*MB^7*MC^3*MZ^2*s^2*SW^4 - 11264*CW^4*MB^7*MC^3*MZ^2*
+     s^2*SW^4 + 512*CW^4*GammaZ^2*MB^4*MC^4*MZ^2*s^2*SW^4 + 
+    17664*CW^2*MB^6*MC^4*MZ^2*s^2*SW^4 - 21504*CW^4*MB^6*MC^4*MZ^2*s^2*SW^4 + 
+    23296*CW^2*MB^5*MC^5*MZ^2*s^2*SW^4 - 28672*CW^4*MB^5*MC^5*MZ^2*s^2*SW^4 + 
+    512*CW^4*GammaZ^2*MB^2*MC^6*MZ^2*s^2*SW^4 + 19200*CW^2*MB^4*MC^6*MZ^2*s^2*
+     SW^4 - 24576*CW^4*MB^4*MC^6*MZ^2*s^2*SW^4 + 17792*CW^2*MB^3*MC^7*MZ^2*
+     s^2*SW^4 - 26624*CW^4*MB^3*MC^7*MZ^2*s^2*SW^4 + 
+    20480*CW^2*MB^2*MC^8*MZ^2*s^2*SW^4 - 32768*CW^4*MB^2*MC^8*MZ^2*s^2*SW^4 + 
+    12800*CW^2*MB*MC^9*MZ^2*s^2*SW^4 - 20480*CW^4*MB*MC^9*MZ^2*s^2*SW^4 + 
+    2560*CW^2*MC^10*MZ^2*s^2*SW^4 - 4096*CW^4*MC^10*MZ^2*s^2*SW^4 + 
+    128*CW^4*MB^6*MC^2*MZ^4*s^2*SW^4 + 512*CW^4*MB^4*MC^4*MZ^4*s^2*SW^4 + 
+    512*CW^4*MB^2*MC^6*MZ^4*s^2*SW^4 + 1024*MB^10*s^3*SW^4 - 
+    1024*CW^2*MB^10*s^3*SW^4 + 512*CW^4*MB^10*s^3*SW^4 + 
+    4256*MB^9*MC*s^3*SW^4 - 5120*CW^2*MB^9*MC*s^3*SW^4 + 
+    2560*CW^4*MB^9*MC*s^3*SW^4 + 6176*MB^8*MC^2*s^3*SW^4 - 
+    8192*CW^2*MB^8*MC^2*s^3*SW^4 + 4096*CW^4*MB^8*MC^2*s^3*SW^4 + 
+    6656*MB^7*MC^3*s^3*SW^4 - 10112*CW^2*MB^7*MC^3*s^3*SW^4 + 
+    5632*CW^4*MB^7*MC^3*s^3*SW^4 + 10080*MB^6*MC^4*s^3*SW^4 - 
+    17664*CW^2*MB^6*MC^4*s^3*SW^4 + 10752*CW^4*MB^6*MC^4*s^3*SW^4 + 
+    12736*MB^5*MC^5*s^3*SW^4 - 23296*CW^2*MB^5*MC^5*s^3*SW^4 + 
+    14336*CW^4*MB^5*MC^5*s^3*SW^4 + 10656*MB^4*MC^6*s^3*SW^4 - 
+    19200*CW^2*MB^4*MC^6*s^3*SW^4 + 12288*CW^4*MB^4*MC^6*s^3*SW^4 + 
+    9536*MB^3*MC^7*s^3*SW^4 - 17792*CW^2*MB^3*MC^7*s^3*SW^4 + 
+    13312*CW^4*MB^3*MC^7*s^3*SW^4 + 10784*MB^2*MC^8*s^3*SW^4 - 
+    20480*CW^2*MB^2*MC^8*s^3*SW^4 + 16384*CW^4*MB^2*MC^8*s^3*SW^4 + 
+    7136*MB*MC^9*s^3*SW^4 - 12800*CW^2*MB*MC^9*s^3*SW^4 + 
+    10240*CW^4*MB*MC^9*s^3*SW^4 + 1600*MC^10*s^3*SW^4 - 
+    2560*CW^2*MC^10*s^3*SW^4 + 2048*CW^4*MC^10*s^3*SW^4 + 
+    256*CW^2*MB^6*MC^2*MZ^2*s^3*SW^4 - 256*CW^4*MB^6*MC^2*MZ^2*s^3*SW^4 + 
+    832*CW^2*MB^4*MC^4*MZ^2*s^3*SW^4 - 1024*CW^4*MB^4*MC^4*MZ^2*s^3*SW^4 + 
+    640*CW^2*MB^2*MC^6*MZ^2*s^3*SW^4 - 1024*CW^4*MB^2*MC^6*MZ^2*s^3*SW^4 + 
+    184*MB^6*MC^2*s^4*SW^4 - 256*CW^2*MB^6*MC^2*s^4*SW^4 + 
+    128*CW^4*MB^6*MC^2*s^4*SW^4 + 496*MB^4*MC^4*s^4*SW^4 - 
+    832*CW^2*MB^4*MC^4*s^4*SW^4 + 512*CW^4*MB^4*MC^4*s^4*SW^4 + 
+    328*MB^2*MC^6*s^4*SW^4 - 640*CW^2*MB^2*MC^6*s^4*SW^4 + 
+    512*CW^4*MB^2*MC^6*s^4*SW^4 - 3072*CW^2*MB^12*MZ^2*s*SW^6 - 
+    12288*CW^2*MB^11*MC*MZ^2*s*SW^6 - 18432*CW^2*MB^10*MC^2*MZ^2*s*SW^6 - 
+    12288*CW^2*MB^9*MC^3*MZ^2*s*SW^6 - 15360*CW^2*MB^8*MC^4*MZ^2*s*SW^6 - 
+    49152*CW^2*MB^7*MC^5*MZ^2*s*SW^6 - 73728*CW^2*MB^6*MC^6*MZ^2*s*SW^6 - 
+    49152*CW^2*MB^5*MC^7*MZ^2*s*SW^6 - 24576*CW^2*MB^4*MC^8*MZ^2*s*SW^6 - 
+    49152*CW^2*MB^3*MC^9*MZ^2*s*SW^6 - 73728*CW^2*MB^2*MC^10*MZ^2*s*SW^6 - 
+    49152*CW^2*MB*MC^11*MZ^2*s*SW^6 - 12288*CW^2*MC^12*MZ^2*s*SW^6 - 
+    3072*MB^12*s^2*SW^6 + 3072*CW^2*MB^12*s^2*SW^6 - 
+    12288*MB^11*MC*s^2*SW^6 + 12288*CW^2*MB^11*MC*s^2*SW^6 - 
+    18432*MB^10*MC^2*s^2*SW^6 + 18432*CW^2*MB^10*MC^2*s^2*SW^6 - 
+    12288*MB^9*MC^3*s^2*SW^6 + 12288*CW^2*MB^9*MC^3*s^2*SW^6 - 
+    13056*MB^8*MC^4*s^2*SW^6 + 15360*CW^2*MB^8*MC^4*s^2*SW^6 - 
+    39936*MB^7*MC^5*s^2*SW^6 + 49152*CW^2*MB^7*MC^5*s^2*SW^6 - 
+    59904*MB^6*MC^6*s^2*SW^6 + 73728*CW^2*MB^6*MC^6*s^2*SW^6 - 
+    39936*MB^5*MC^7*s^2*SW^6 + 49152*CW^2*MB^5*MC^7*s^2*SW^6 - 
+    17664*MB^4*MC^8*s^2*SW^6 + 24576*CW^2*MB^4*MC^8*s^2*SW^6 - 
+    30720*MB^3*MC^9*s^2*SW^6 + 49152*CW^2*MB^3*MC^9*s^2*SW^6 - 
+    46080*MB^2*MC^10*s^2*SW^6 + 73728*CW^2*MB^2*MC^10*s^2*SW^6 - 
+    30720*MB*MC^11*s^2*SW^6 + 49152*CW^2*MB*MC^11*s^2*SW^6 - 
+    7680*MC^12*s^2*SW^6 + 12288*CW^2*MC^12*s^2*SW^6 - 
+    1024*CW^2*MB^10*MZ^2*s^2*SW^6 - 5120*CW^2*MB^9*MC*MZ^2*s^2*SW^6 - 
+    8192*CW^2*MB^8*MC^2*MZ^2*s^2*SW^6 - 11264*CW^2*MB^7*MC^3*MZ^2*s^2*SW^6 - 
+    21504*CW^2*MB^6*MC^4*MZ^2*s^2*SW^6 - 28672*CW^2*MB^5*MC^5*MZ^2*s^2*SW^6 - 
+    24576*CW^2*MB^4*MC^6*MZ^2*s^2*SW^6 - 26624*CW^2*MB^3*MC^7*MZ^2*s^2*SW^6 - 
+    32768*CW^2*MB^2*MC^8*MZ^2*s^2*SW^6 - 20480*CW^2*MB*MC^9*MZ^2*s^2*SW^6 - 
+    4096*CW^2*MC^10*MZ^2*s^2*SW^6 - 1024*MB^10*s^3*SW^6 + 
+    1024*CW^2*MB^10*s^3*SW^6 - 5120*MB^9*MC*s^3*SW^6 + 
+    5120*CW^2*MB^9*MC*s^3*SW^6 - 8192*MB^8*MC^2*s^3*SW^6 + 
+    8192*CW^2*MB^8*MC^2*s^3*SW^6 - 10112*MB^7*MC^3*s^3*SW^6 + 
+    11264*CW^2*MB^7*MC^3*s^3*SW^6 - 17664*MB^6*MC^4*s^3*SW^6 + 
+    21504*CW^2*MB^6*MC^4*s^3*SW^6 - 23296*MB^5*MC^5*s^3*SW^6 + 
+    28672*CW^2*MB^5*MC^5*s^3*SW^6 - 19200*MB^4*MC^6*s^3*SW^6 + 
+    24576*CW^2*MB^4*MC^6*s^3*SW^6 - 17792*MB^3*MC^7*s^3*SW^6 + 
+    26624*CW^2*MB^3*MC^7*s^3*SW^6 - 20480*MB^2*MC^8*s^3*SW^6 + 
+    32768*CW^2*MB^2*MC^8*s^3*SW^6 - 12800*MB*MC^9*s^3*SW^6 + 
+    20480*CW^2*MB*MC^9*s^3*SW^6 - 2560*MC^10*s^3*SW^6 + 
+    4096*CW^2*MC^10*s^3*SW^6 - 256*CW^2*MB^6*MC^2*MZ^2*s^3*SW^6 - 
+    1024*CW^2*MB^4*MC^4*MZ^2*s^3*SW^6 - 1024*CW^2*MB^2*MC^6*MZ^2*s^3*SW^6 - 
+    256*MB^6*MC^2*s^4*SW^6 + 256*CW^2*MB^6*MC^2*s^4*SW^6 - 
+    832*MB^4*MC^4*s^4*SW^6 + 1024*CW^2*MB^4*MC^4*s^4*SW^6 - 
+    640*MB^2*MC^6*s^4*SW^6 + 1024*CW^2*MB^2*MC^6*s^4*SW^6 + 
+    1536*MB^12*s^2*SW^8 + 6144*MB^11*MC*s^2*SW^8 + 9216*MB^10*MC^2*s^2*SW^8 + 
+    6144*MB^9*MC^3*s^2*SW^8 + 7680*MB^8*MC^4*s^2*SW^8 + 
+    24576*MB^7*MC^5*s^2*SW^8 + 36864*MB^6*MC^6*s^2*SW^8 + 
+    24576*MB^5*MC^7*s^2*SW^8 + 12288*MB^4*MC^8*s^2*SW^8 + 
+    24576*MB^3*MC^9*s^2*SW^8 + 36864*MB^2*MC^10*s^2*SW^8 + 
+    24576*MB*MC^11*s^2*SW^8 + 6144*MC^12*s^2*SW^8 + 512*MB^10*s^3*SW^8 + 
+    2560*MB^9*MC*s^3*SW^8 + 4096*MB^8*MC^2*s^3*SW^8 + 
+    5632*MB^7*MC^3*s^3*SW^8 + 10752*MB^6*MC^4*s^3*SW^8 + 
+    14336*MB^5*MC^5*s^3*SW^8 + 12288*MB^4*MC^6*s^3*SW^8 + 
+    13312*MB^3*MC^7*s^3*SW^8 + 16384*MB^2*MC^8*s^3*SW^8 + 
+    10240*MB*MC^9*s^3*SW^8 + 2048*MC^10*s^3*SW^8 + 128*MB^6*MC^2*s^4*SW^8 + 
+    512*MB^4*MC^4*s^4*SW^8 + 512*MB^2*MC^6*s^4*SW^8))/
+ (69984*CW^4*MB^6*MC^6*s^(13/2)*((-I)*GammaZ*MZ - MZ^2 + s)*
+  (I*GammaZ*MZ - MZ^2 + s)*SW^4)

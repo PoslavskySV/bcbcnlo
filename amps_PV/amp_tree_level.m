@@ -1,0 +1,1 @@
+(64/3*I)*MC^(-3)*e*scalar0*MB^(-3)*s^(-2)*(-2*MC^3+MB^3)*(MB+MC)^4*gStrong^2

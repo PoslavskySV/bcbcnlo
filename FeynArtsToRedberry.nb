@@ -1,0 +1,451 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15262,        442]
+NotebookOptionsPosition[     13896,        390]
+NotebookOutlinePosition[     14248,        406]
+CellTagsIndexPosition[     14205,        403]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6801630596174107`*^9, 3.680163066987637*^9}, {
+  3.680163114735277*^9, 3.680163115322459*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<FeynArts`FeynArts`\>\"", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<FeynArtsToRedberry.m\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$FAVerbose", "=", "1"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"$PrePrint", "=", "InputForm"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.680163084378213*^9, 3.680163085587873*^9}, {
+  3.680163126702181*^9, 3.6801631301697683`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox["\<\"\"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{3.680163130463479*^9, 3.680163175981257*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"FeynArts 3.9 (23 Sep 2015)\"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{3.680163130463479*^9, 3.680163175986637*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"by Hagen Eck, Sepp Kueblbeck, and Thomas Hahn\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.680163130463479*^9, 3.680163175991906*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"$ExcludeTopologies", "[", "V4onExt", "]"}], "=", 
+   RowBox[{
+    RowBox[{"FreeQ", "[", 
+     RowBox[{
+      RowBox[{"Cases", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{
+         RowBox[{"Propagator", "[", "External", "]"}], "[", "__", "]"}]}], 
+       "]"}], ",", 
+      RowBox[{"Vertex", "[", "4", "]"}]}], "]"}], "&"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$diagrams", "=", 
+   RowBox[{"CreateTopologies", "[", 
+    RowBox[{"1", ",", 
+     RowBox[{"1", "\[Rule]", "4"}], ",", 
+     RowBox[{"Adjacencies", "\[Rule]", 
+      RowBox[{"{", "3", "}"}]}], ",", 
+     RowBox[{"ExcludeTopologies", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"WFCorrections", ",", "Tadpoles", ",", "V4onExt"}], "}"}]}]}], 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"$diagrams", "=", 
+   RowBox[{"InsertFields", "[", 
+    RowBox[{"$diagrams", ",", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"V", "[", "1", "]"}], "}"}], "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"(*", 
+        RowBox[{"c", "-", "quark"}], "*)"}], 
+       RowBox[{
+        RowBox[{"F", "[", 
+         RowBox[{"3", ",", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", 
+            RowBox[{"Index", "[", 
+             RowBox[{"Colour", ",", "1"}], "]"}]}], "}"}]}], "]"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{"c", "-", "antiquark"}], "*)"}], 
+        RowBox[{"-", 
+         RowBox[{"F", "[", 
+          RowBox[{"3", ",", 
+           RowBox[{"{", 
+            RowBox[{"2", ",", 
+             RowBox[{"Index", "[", 
+              RowBox[{"Colour", ",", "2"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+        RowBox[{"(*", 
+         RowBox[{"b", "-", "quark"}], "*)"}], 
+        RowBox[{"F", "[", 
+         RowBox[{"4", ",", 
+          RowBox[{"{", 
+           RowBox[{"3", ",", 
+            RowBox[{"Index", "[", 
+             RowBox[{"Colour", ",", "3"}], "]"}]}], "}"}]}], "]"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{"b", "-", "antiquark"}], "*)"}], 
+        RowBox[{"-", 
+         RowBox[{"F", "[", 
+          RowBox[{"4", ",", 
+           RowBox[{"{", 
+            RowBox[{"3", ",", 
+             RowBox[{"Index", "[", 
+              RowBox[{"Colour", ",", "4"}], "]"}]}], "}"}]}], "]"}]}]}], 
+       "}"}]}], ",", 
+     RowBox[{"ExcludeParticles", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"S", "[", "_", "]"}], ",", 
+        RowBox[{"V", "[", "1", "]"}], ",", 
+        RowBox[{"V", "[", "2", "]"}], ",", 
+        RowBox[{"V", "[", "3", "]"}], ",", 
+        RowBox[{"V", "[", "4", "]"}], ",", 
+        RowBox[{"U", "[", 
+         RowBox[{"Except", "[", "5", "]"}], "]"}]}], "}"}]}], ",", 
+     RowBox[{"Model", "\[Rule]", "\"\<SMQCD\>\""}], ",", 
+     RowBox[{"InsertionLevel", "\[Rule]", 
+      RowBox[{"{", "Particles", "}"}]}], ",", 
+     RowBox[{"Restrictions", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "NoElectronHCoupling", ",", "NoLightFHCoupling", ",", 
+        "NoQuarkMixing"}], "}"}]}], ",", 
+     RowBox[{"ExcludeFieldPoints", "\[Rule]", 
+      RowBox[{"{", "}"}]}], ",", 
+     RowBox[{"LastSelections", "\[Rule]", 
+      RowBox[{"V", "[", "5", "]"}]}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"$amplitudes", "=", 
+   RowBox[{"CreateFeynAmp", "[", 
+    RowBox[{"$diagrams", ",", 
+     RowBox[{"MomentumConservation", "\[Rule]", "True"}]}], "]"}]}], 
+  ";"}]}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"generic model \"\>", "\[InvisibleSpace]", 
+    RowBox[{"{", "\<\"Lorentz\"\>", "}"}], 
+    "\[InvisibleSpace]", "\<\" initialized\"\>"}],
+   SequenceForm["generic model ", {"Lorentz"}, " initialized"],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.6801630981752033`*^9, 3.6801631318258247`*^9}}],
+
+Cell[BoxData[
+ FormBox["\<\"\"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.6801630981752033`*^9, 3.680163131829603*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[GridBox[{
+     {GridBox[{
+        {
+         RowBox[{"$CKM", "=", "False"}]}
+       },
+       BaselinePosition->{Baseline, {1, 1}},
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}}]}
+    },
+    BaselinePosition->{Baseline, {1, 1}},
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}}],
+   Definition[$CellContext`$CKM],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.6801630981752033`*^9, 3.680163131834565*^9}}],
+
+Cell[BoxData[
+ FormBox["\<\"\"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.6801630981752033`*^9, 3.6801631318371353`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"classes model \"\>", "\[InvisibleSpace]", 
+    RowBox[{"{", "\<\"SMQCD\"\>", "}"}], 
+    "\[InvisibleSpace]", "\<\" initialized\"\>"}],
+   SequenceForm["classes model ", {"SMQCD"}, " initialized"],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.6801630981752033`*^9, 3.6801631318771*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"in total: \"\>", 
+    "\[InvisibleSpace]", "\<\"86 Particles insertions\"\>"}],
+   SequenceForm["in total: ", "86 Particles insertions"],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.6801630981752033`*^9, 3.680163137046834*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"in total: \"\>", 
+    "\[InvisibleSpace]", "\<\"86 Particles amplitudes\"\>"}],
+   SequenceForm["in total: ", "86 Particles amplitudes"],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.6801630981752033`*^9, 3.6801631377091827`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<FeynArtsToRedberry.m\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ToRedberry", "[", 
+  RowBox[{
+   RowBox[{"$amplitudes", "[", 
+    RowBox[{"[", 
+     RowBox[{"2", ",", "3"}], "]"}], "]"}], ",", 
+   RowBox[{"ReplacePolarizations", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"k", "\[Rule]", "$eps"}], "}"}]}], ",", 
+   RowBox[{"Momentums", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "k", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"pCharm", ",", "paCharm", ",", "pBottom", ",", "paBottom"}], 
+       "}"}], ",", 
+      RowBox[{"{", "q", "}"}]}], "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.680163146457707*^9, 3.680163150419962*^9}, {
+  3.680163202222062*^9, 3.680163229575049*^9}}],
+
+Cell["\<\
+\"ubar[pBottom_a] * (-I) * gStrong * G_{b} * T_{F} * v[paBottom_a] * \
+ubar[pCharm_a] * ((-2*I)/3) * e * G_{a} * \\
+(MC-DiracSlash[paBottom_{a}]-DiracSlash[paCharm_{a}]-DiracSlash[pBottom_{a}]) \
+* (-I) * gStrong * G_{f} * T_{H} * (MC+DiracSlash[q_{a}]) * (-I) * gStrong * \\
+G_{d} * T_{G} * v[paCharm_a] * (-1/16) * gStrong * Pi**(-4) * \\
+(1/((-MC**2+Pair[q_{a},q_{a}])*(Pair[paCharm_{a},paCharm_{a}]+Pair[paCharm_{a}\
+,q_{a}]+Pair[q_{a},paCharm_{a}]+Pair[q_{a},q_{a}])*(Pair[paBottom_{a},\
+paBottom_\\
+{a}]+Pair[paBottom_{a},paCharm_{a}]+Pair[paBottom_{a},pBottom_{a}]+Pair[\
+paBottom_{a},q_{a}]+Pair[paCharm_{a},paBottom_{a}]+Pair[paCharm_{a},paCharm_{\
+a}]+Pair\\
+[paCharm_{a},pBottom_{a}]+Pair[paCharm_{a},q_{a}]+Pair[pBottom_{a},paBottom_{\
+a}]+Pair[pBottom_{a},paCharm_{a}]+Pair[pBottom_{a},pBottom_{a}]+Pair[pBottom_{\
+a}\\
+,q_{a}]+Pair[q_{a},paBottom_{a}]+Pair[q_{a},paCharm_{a}]+Pair[q_{a},pBottom_{\
+a}]+Pair[q_{a},q_{a}]))) * g_{bc} * g_{de} * \\
+((paBottom_{g}-paCharm_{g}+pBottom_{g}-q_{g})*g_{ce}+(-2*paBottom_{e}-paCharm_\
+{e}-2*pBottom_{e}-q_{e})*g_{cg}+(paBottom_{c}+2*paCharm_{c}+pBottom_{c}+2*q_{\
+c}\\
+)*g_{eg}) * g_{fg} * $eps_a * \\
+(Pair[paBottom_{a},paBottom_{a}]+Pair[paBottom_{a},pBottom_{a}]+Pair[pBottom_{\
+a},paBottom_{a}]+Pair[pBottom_{a},pBottom_{a}])**(-1) * \\
+(-MC**2+Pair[paBottom_{a},paBottom_{a}]+Pair[paBottom_{a},paCharm_{a}]+Pair[\
+paBottom_{a},pBottom_{a}]+Pair[paCharm_{a},paBottom_{a}]+Pair[paCharm_{a},\
+paCharm\\
+_{a}]+Pair[paCharm_{a},pBottom_{a}]+Pair[pBottom_{a},paBottom_{a}]+Pair[\
+pBottom_{a},paCharm_{a}]+Pair[pBottom_{a},pBottom_{a}])**(-1) * f_{FGH}\"\
+\>", "Output",
+ CellChangeTimes->{{3.680163150721138*^9, 3.680163229939288*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<FeynArtsToRedberry.m\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ToRedberry", "[", 
+  RowBox[{
+   RowBox[{"$amplitudes", "[", 
+    RowBox[{"[", 
+     RowBox[{"2", ",", "3"}], "]"}], "]"}], ",", 
+   RowBox[{"ReplacePolarizations", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"k", "\[Rule]", "$eps"}], "}"}]}], ",", 
+   RowBox[{"Momentums", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "k", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"pCharm", ",", "paCharm", ",", "pBottom", ",", "paBottom"}], 
+       "}"}], ",", 
+      RowBox[{"{", "q", "}"}]}], "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.680163323997127*^9, 3.6801633254965467`*^9}}],
+
+Cell["\<\
+\"ubar[pBottom_a] * (-I) * gStrong * G_{b} * T_{F} * v[paBottom_a] * \
+ubar[pCharm_a] * ((-2*I)/3) * e * G_{a} * \\
+(MC-DiracSlash[paBottom_{a}]-DiracSlash[paCharm_{a}]-DiracSlash[pBottom_{a}]) \
+* (-I) * gStrong * G_{f} * T_{H} * (MC+DiracSlash[q_{a}]) * (-I) * gStrong * \\
+G_{d} * T_{G} * v[paCharm_a] * (-1/16) * gStrong * Pi**(-4) * \\
+FeynAmpDenominator[PropagatorDenominator[InsertPropIndex[q_{a}],MC],\
+PropagatorDenominator[InsertPropIndex[paCharm_{a}]+InsertPropIndex[q_{a}],0],\
+PropagatorDe\\
+nominator[InsertPropIndex[paBottom_{a}]+InsertPropIndex[paCharm_{a}]+\
+InsertPropIndex[pBottom_{a}]+InsertPropIndex[q_{a}],0]] * g_{bc} * g_{de} * \
+\\
+((paBottom_{g}-paCharm_{g}+pBottom_{g}-q_{g})*g_{ce}+(-2*paBottom_{e}-paCharm_\
+{e}-2*pBottom_{e}-q_{e})*g_{cg}+(paBottom_{c}+2*paCharm_{c}+pBottom_{c}+2*q_{\
+c}\\
+)*g_{eg}) * g_{fg} * $eps_a * \
+PropagatorDenominator[-InsertPropIndex[paBottom_{a}]-InsertPropIndex[pBottom_{\
+a}],0] * \\
+PropagatorDenominator[InsertPropIndex[paBottom_{a}]+InsertPropIndex[paCharm_{\
+a}]+InsertPropIndex[pBottom_{a}],MC] * f_{FGH}\"\
+\>", "Output",
+ CellChangeTimes->{{3.680163231516148*^9, 3.6801632425658092`*^9}, 
+   3.680163325807332*^9, {3.680163719631269*^9, 3.680163732614456*^9}}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"InsertIndex", "[", "x_Plus", "]"}], ":=", 
+  RowBox[{"Map", "[", 
+   RowBox[{"InsertIndex", ",", "x"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"InsertIndex", "[", 
+    RowBox[{"a_", " ", "x_"}], "]"}], "/;", 
+   RowBox[{"NumberQ", "[", "a", "]"}]}], ":=", 
+  RowBox[{"a", " ", 
+   RowBox[{"InsertIndex", "[", "x", "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"InsertIndex", "[", "x_Symbol", "]"}], ":=", " ", 
+  RowBox[{"FV", "[", 
+   RowBox[{"x", ",", "\"\<a\>\""}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.680163338773745*^9, 3.680163396068121*^9}, {
+  3.680163446604604*^9, 3.680163524921*^9}, {3.680163638668201*^9, 
+  3.680163639122847*^9}, {3.680163745414844*^9, 3.6801637458862467`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$GetIndex", "[", 
+   RowBox[{"2", ",", "LatinLower"}], "]"}], "\n"}]], "Input",
+ CellChangeTimes->{{3.68016358974445*^9, 3.6801635998334618`*^9}}],
+
+Cell["\"b\"", "Output",
+ CellChangeTimes->{3.6801636000561943`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InsertIndex", "[", 
+  RowBox[{"2", "a"}], "]"}]], "Input",
+ CellChangeTimes->{{3.680163398733323*^9, 3.6801633997179317`*^9}, {
+  3.680163494865035*^9, 3.680163495197358*^9}}],
+
+Cell["2*InsertIndex[FV[a, a]]", "Output",
+ CellChangeTimes->{3.680163400087575*^9, 3.6801634525241613`*^9, 
+  3.68016349543795*^9, 3.680163526311924*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"PropagatorDenominator", "[", 
+  RowBox[{
+   RowBox[{"paBottom", "+", "paCharm", "+", "pBottom", "+", "q"}], ",", "0"}],
+   "]"}]], "Input",
+ CellChangeTimes->{{3.680163336233934*^9, 3.680163336236326*^9}}]
+},
+WindowSize->{1349, 768},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 6, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 240, 5, 28, "Input"],
+Cell[CellGroupData[{
+Cell[823, 29, 450, 11, 80, "Input"],
+Cell[CellGroupData[{
+Cell[1298, 44, 126, 2, 20, "Print"],
+Cell[1427, 48, 152, 2, 20, "Print"],
+Cell[1582, 52, 174, 3, 20, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1805, 61, 3377, 96, 148, "Input"],
+Cell[CellGroupData[{
+Cell[5207, 161, 381, 8, 20, "Print"],
+Cell[5591, 171, 130, 2, 20, "Print"],
+Cell[5724, 175, 788, 21, 20, "Print"],
+Cell[6515, 198, 132, 2, 20, "Print"],
+Cell[6650, 202, 373, 8, 20, "Print"],
+Cell[7026, 212, 315, 7, 20, "Print"],
+Cell[7344, 221, 317, 7, 20, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7710, 234, 777, 21, 46, "Input"],
+Cell[8490, 257, 1699, 29, 194, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10226, 291, 730, 20, 46, "Input"],
+Cell[10959, 313, 1238, 22, 134, "Output"]
+}, Open  ]],
+Cell[12212, 338, 768, 18, 63, "Input"],
+Cell[CellGroupData[{
+Cell[13005, 360, 181, 4, 46, "Input"],
+Cell[13189, 366, 67, 1, 29, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13293, 372, 199, 4, 28, "Input"],
+Cell[13495, 378, 153, 2, 29, "Output"]
+}, Open  ]],
+Cell[13663, 383, 229, 5, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
