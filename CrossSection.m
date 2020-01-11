@@ -1,5 +1,9 @@
+(* ::Package:: *)
+
 (********* Utility variables and functions ***********)
 << X`;
+(*pvC0 = ScalarC0;*)
+
 $PreRead = (# /. s_String /; StringMatchQ[s, NumberString] && Precision@ToExpression@s == MachinePrecision :> s <> "`50." &);
 
 $MC = 1.5;
@@ -79,7 +83,7 @@ $EnsureCacheIsInitialized[id_] := Module[{},
     {var, {"tree", "treeCountertermsFinite", "loop", "mtab"}}
   ];
 
-  $Cache[id]["loop"] = Collect[Total@$Cache[id]["loop"], gStrong];
+  $Cache[id]["loop"] = Collect[(Total@$Cache[id]["loop"])/.(0.->0)/.Total[x_]:>x, gStrong];
 ];
 
 SquareAmplitude[id_, $s_, $t_] := Module[{$u, tree, loop, mtab, subs, total, cTotal, matr2, treeCT},
